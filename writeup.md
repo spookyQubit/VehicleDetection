@@ -50,6 +50,7 @@ It is important to remove regions in the image which are incorrectly predicted b
 The entry point to the entire pipeline is the process_image function implemented in class CarFinder in [carFinder.py](https://github.com/spookyQubit/VehicleDetection/blob/master/src/carFinderder.py). This is the function to which the VideoFileClip library passes each frame of the video. An example of a vehicle detected image from the final pipeline is shown below:
 ![alt text][image1]
 The video that this pipeline yields can be found on [youtube](https://www.youtube.com/watch?v=Bzi4gCuLkSs&feature=youtu.be).
+
 --- 
 
 ###
