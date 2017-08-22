@@ -6,7 +6,7 @@ The steps followed to achieve this goal are:
 
 * Feature Extraction: From a set of training images, we first extract the features needed to build a classifier to distinguish a vehicle from a non-vehicle. 
 
-* Classifier: A gird search is used to find the best classifier. sklearn's GridSearcgCV is used with cv=3. The parameter spaces which we search for include: 1) Linear/RBF SVC, 2) C, and 3) gamma. The best classier is found to be an RBF SVC with C=1 and gamma='auto'. 
+* Classifier: Gird search is used to find the best classifier. sklearn's GridSearcgCV is used with cv=3. The parameter spaces which we search for include: 1) Linear/RBF SVC, 2) C, and 3) gamma. The best classier is found to be an RBF SVC with C=1 and gamma='auto'. 
 
 * Sliding window: After building a classifer, a sliding window technique is used to feed in image sections (windows) to the classifier. The classifer then predicts whether the section contains a vehicle or not.  
 
@@ -22,7 +22,10 @@ The steps followed to achieve this goal are:
 ---
 
 ### Feature Extraction
-The code to extract features from a given image can be found in the functions implemented in [featureExtractor.py](#link). The three features which are considered in the project are 1) spatial color binning, 2) histogram of colors, and 3) [Histogram of Oriented Gradients](#link) (HOG).  
+The code to extract features from a given image can be found in the functions implemented in [featureExtractor.py](#link). The three features which are considered in the project are 
+* spatial color binning
+* histogram of colors
+* [Histogram of Oriented Gradients](https://en.wikipedia.org/wiki/Histogram_of_oriented_gradients) (HOG).  
 
 ---
 
