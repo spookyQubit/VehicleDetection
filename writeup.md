@@ -23,9 +23,9 @@ The steps followed to achieve this goal are:
 
 ### Feature Extraction
 The code to extract features from a given image can be found in the functions implemented in [featureExtractor.py](#link). The three features which are considered in the project are 
-* spatial color binning
-* histogram of colors
-* [Histogram of Oriented Gradients](https://en.wikipedia.org/wiki/Histogram_of_oriented_gradients) (HOG).  
+* spatial pixel binning: Pixel intensities of a resized image to (32x32) is used as a feature. 
+* histogram of colors: A concatenated version of histograms of all colors is used as a feature.   
+* [Histogram of Oriented Gradients](https://en.wikipedia.org/wiki/Histogram_of_oriented_gradients) (HOG): Pixels per cell used is 8x8, and for normalization. 2x2 cells per block is used for normalization. I use 9 orientations per block to generate the features.   
 
 ---
 
