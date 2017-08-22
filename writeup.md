@@ -58,6 +58,6 @@ The project was a good learning experience where machine learning was used in co
 3) The model does not use the fact that vehicles in smaller scales are likely to be found further away from the car. This introduces latency and reduces the model performance significantly. 
     
 #### References
-* Tutorial on HOG: http://mccormickml.com/2013/05/09/hog-person-detector-tutorial/
-* Caching idea: https://github.com/shubhamchopra/CarND-Vehicle-Detection
-* Sliding window technique: http://www.pyimagesearch.com/2015/03/23/sliding-windows-for-object-detection-with-python-and-opencv/
+* [Tutorial on HOG](http://mccormickml.com/2013/05/09/hog-person-detector-tutorial/)
+* [Caching idea](https://github.com/shubhamchopra/CarND-Vehicle-Detection)
+* [Sliding window technique](http://www.pyimagesearch.com/2015/03/23/sliding-windows-for-object-detection-with-python-and-opencv/)
