@@ -1,3 +1,5 @@
+### Vehicle detection
+
 The goal of this project is to to use computer vison and machine learning techniques to detect cars in a video stream. The video is taken from a front facing camera mounted on a moving vehicle. 
 
 The steps followed to achieve this goal are:
@@ -15,7 +17,7 @@ The steps followed to achieve this goal are:
 
 [//]: # (Image References)
 
-[image1]: ./output_images/___.jpg "Vehicle detected image"
+[image1]: ./output_images/test4_cars_detected.jpg "Vehicle detected image"
 
 ---
 
