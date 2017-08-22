@@ -40,7 +40,9 @@ In oredr to be able to detect cars, each image is segmented into overlapping win
 ---
 
 ### Road Sanity
-It is important to remove regions in the image which are incorrectly predicted by the classier to contain a vehicle. Two techniques are used to reduce false positives: 1) information about the history of images seen in the video is kept in class WindowHistory implemented in [roadCache.py](https://github.com/spookyQubit/VehicleDetection/blob/master/src/roadCache.py), 2) a voting sheme is applied where pixels are assumed to be part of a vehicle only if it gets more votes (a pixel gets a vote when a window containing the pixel is predicted to have a vehicle) than a pre-defined threshold.   
+It is important to remove regions in the image which are incorrectly predicted by the classier to contain a vehicle. Two techniques are used to reduce false positives: 
+* information about the history of images seen in the video is kept in class WindowHistory implemented in [roadCache.py](https://github.com/spookyQubit/VehicleDetection/blob/master/src/roadCache.py), 
+* a voting sheme is applied where pixels are assumed to be part of a vehicle only if it gets more votes (a pixel gets a vote when a window containing the pixel is predicted to have a vehicle) than a pre-defined threshold.   
 
 ---
 
