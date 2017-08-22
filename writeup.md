@@ -22,7 +22,7 @@ The steps followed to achieve this goal are:
 ---
 
 ### Feature Extraction
-The code to extract features from a given image can be found in the functions implemented in [featureExtractor.py](#link). The three features which are considered in the project are 
+The code to extract features from a given image can be found in the functions implemented in [featureExtractor.py](https://github.com/spookyQubit/VehicleDetection/blob/master/src/featureExtractor.py). The three features which are considered in the project are 
 * spatial pixel binning: Pixel intensities of a resized image to (32x32) is used as a feature. 
 * histogram of colors: A concatenated version of histograms of all colors is used as a feature.   
 * [Histogram of Oriented Gradients](https://en.wikipedia.org/wiki/Histogram_of_oriented_gradients) (HOG): Pixels per cell used is 8x8. 2x2 cells per block is used for normalization. I use 9 orientations per block to generate the features.   
@@ -30,22 +30,22 @@ The code to extract features from a given image can be found in the functions im
 ---
 
 ### Classifier
-I used sklearn's SVC library as a classifier to distinguish between vehicles and non-vehicles. The best cross-validation accuracy is achieved for SVC with rbf kernel. Around 15000 samples were trained to build the classifer. Even with this modest number of samples, SVC was slow to train. The impplementation of the classifer can be found in [carClassifier.py](#link). 
+I used sklearn's SVC library as a classifier to distinguish between vehicles and non-vehicles. The best cross-validation accuracy is achieved for SVC with rbf kernel. Around 15000 samples were trained to build the classifer. Even with this modest number of samples, SVC was slow to train. The impplementation of the classifer can be found in [carClassifier.py](https://github.com/spookyQubit/VehicleDetection/blob/master/src/carClassifier.py). 
 
 ---
 
 ### Car Finder
-In oredr to be able to detect cars, each image is segmented into overlapping windows. Each of these windows is then fed into the classifer to predict whether the window has a vehicle or not. This sliding window technique is implemented in the CarFinder class in [carFinder.py](#link). 
+In oredr to be able to detect cars, each image is segmented into overlapping windows. Each of these windows is then fed into the classifer to predict whether the window has a vehicle or not. This sliding window technique is implemented in the CarFinder class in [carFinder.py](https://github.com/spookyQubit/VehicleDetection/blob/master/src/carFinderder.py). 
 
 ---
 
 ### Road Sanity
-It is important to remove regions in the image which are incorrectly predicted by the classier to contain a vehicle. Two techniques are used to reduce false positives: 1) information about the history of images seen in the video is kept in class WindowHistory implemented in [roadCache.py](#link), 2) a voting sheme is applied where pixels are assumed to be part of a vehicle only if it gets more votes (a pixel gets a vote when a window containing the pixel is predicted to have a vehicle) than a pre-defined threshold.   
+It is important to remove regions in the image which are incorrectly predicted by the classier to contain a vehicle. Two techniques are used to reduce false positives: 1) information about the history of images seen in the video is kept in class WindowHistory implemented in [roadCache.py](https://github.com/spookyQubit/VehicleDetection/blob/master/src/roadCache.py), 2) a voting sheme is applied where pixels are assumed to be part of a vehicle only if it gets more votes (a pixel gets a vote when a window containing the pixel is predicted to have a vehicle) than a pre-defined threshold.   
 
 ---
 
 ### Main image processor
-The entry point to the entire pipeline is the process_image function implemented in class CarFinder in [carFinder.py](#link). This is the function to which the VideoFileClip library passes each frame of the video. An example of a vehicle detected image from the final pipeline is shown below:
+The entry point to the entire pipeline is the process_image function implemented in class CarFinder in [carFinder.py](https://github.com/spookyQubit/VehicleDetection/blob/master/src/carFinderder.py). This is the function to which the VideoFileClip library passes each frame of the video. An example of a vehicle detected image from the final pipeline is shown below:
 ![alt text][image1]
 
 --- 
