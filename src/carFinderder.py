@@ -180,4 +180,4 @@ if __name__ == "__main__":
         boxed_image = cf.process_image(img)
         plt.imshow(boxed_image)
         plt.show()
-        cv2.imwrite("../output_images/test4_cars_detected.jpg", img)
+        cv2.imwrite("../output_images/test4_cars_detected.jpg", boxed_image)
